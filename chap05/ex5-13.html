@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      width: 80%;
+      margin: 0 auto;
+      border: 1px dotted red;
+    }
+
+    form>fieldset>label {
+      display: inline-block;
+      width: 20%;
+      font-size: 1em;
+    }
+
+    form input[type="text"],
+    form input[type="password"] {
+      border: 2px dotted skyblue;
+    }
+
+    form input[type="text"]:focus {
+      outline: 2px solid navy;
+      background-color: beige;
+      color: navy;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>회원가입</h1>
+  <hr>
+  <form action="#" method="post">
+    <fieldset>
+      <legend>회원정보입력</legend>
+      <label for="name">이름</label>
+      <input type="text" name="name" id="name" size="20" maxlength="5" placeholder="이름입력">
+      <br>
+      <label for="userId">아이디</label>
+      <input type="text" name="userId" id="userId" size="20" maxlength="8" placeholder="아이디입력">
+      <br>
+      <label for="pwd">비밀번호</label>
+      <input type="password" name="pwd" id="pwd" size="20" maxlength="20" placeholder="비밀번호입력">
+    </fieldset>
+    <fieldset>
+      <legend>주소등록</legend>
+      <label for="name">이름</label>
+      <input type="text" name="name" id="name" size="20" maxlength="5" placeholder="이름입력">
+      <br>
+      <label for="userId">아이디</label>
+      <input type="text" name="userId" id="userId" size="20" maxlength="8" placeholder="아이디입력">
+      <br>
+      <label for="pwd">비밀번호</label>
+      <input type="password" name="pwd" id="pwd" size="20" maxlength="20" placeholder="비밀번호입력">
+    </fieldset>
+  </form>
+</body>
+
+</html>

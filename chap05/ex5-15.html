@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @keyframes spanChangeColor {
+      0% {
+        color: darkgray;
+        border: 1px solid darkgray;
+        font-size: 1em;
+      }
+
+      30% {
+        color: skyblue;
+        border: 1px solid skyblue;
+        font-size: 1.5em;
+      }
+
+      70% {
+        color: rgb(31, 230, 163);
+        border: 1px solid rgb(31, 230, 163);
+        font-size: 2em;
+      }
+
+      100% {
+        color: darkblue;
+        border: 1px solid darkblue;
+        font-size: 1.5em;
+      }
+    }
+
+    span {
+      animation-name: spanChangeColor;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes h1FontSize {
+      0% {
+        font-size: 500%;
+        color: brown;
+      }
+
+      100% {
+        font-size: 100%;
+        color: cadetblue;
+      }
+    }
+
+    h1 {
+      animation-name: h1FontSize;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+
+    /* h1 {
+      transition: font-size 3s;
+    }
+    h1:hover {
+      font-size: 4em;
+    } */
+  </style>
+</head>
+
+<body>
+  <h1>MESSI</h1>
+  <hr>
+  <p>
+    Lorem ipsum <span>dolor</span> sit, amet consectetur adipisicing elit. Adipisci accusantium nobis consequatur
+    quaerat officiis. Quisquam quos deleniti sapiente illum laborum suscipit sit, in, porro molestias dolores corrupti
+    quaerat non alias!
+    Perferendis officia totam aliquam provident sint quae aperiam nobis in, perspiciatis fugit, ab maxime est modi
+    debitis similique atque esse eligendi voluptatem explicabo repellendus minus magni quo. Repellendus, error.
+    Laudantium.
+  </p>
+</body>
+
+</html>

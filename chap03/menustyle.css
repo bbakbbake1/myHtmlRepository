@@ -1,0 +1,109 @@
+body {
+  margin-top: 0px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1em; /* 16px => 1em 1.5em => 24px */
+  color: white;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+header {
+  width: 80%;
+  border: 1px dotted red;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4b4545;
+  position: relative;
+}
+
+header > .nav-logo {
+  font-size: 24px;
+  padding-left: 10px;
+}
+
+header > .nav-logo > i {
+  color: orangered;
+}
+
+header > .nav-logo > i:hover {
+  color: skyblue;
+}
+
+header > .nav-logo > a:hover {
+  color: skyblue;
+}
+
+ul.nav-menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+ul.nav-menu > li {
+  padding: 6px 10px;
+}
+
+header > .nav-menu > li:hover {
+  background-color: skyblue;
+  border-radius: 10px;
+}
+
+header > ul.nav-menu > li:hover > a {
+  color: antiquewhite;
+}
+
+header > .nav-icon {
+  padding-right: 10px;
+  color: white;
+}
+
+header > .nav-icon > i:hover {
+  color: skyblue;
+}
+
+header > a.nav-toggle {
+  display: none;
+}
+
+/* 화면이 최대 800px 영역으로 들어오면 반응형 웹을 진행한다. */
+@media screen and (max-width: 760px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header > ul.nav-menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: none;
+  }
+  header > .nav-menu > li {
+    width: 100%;
+    text-align: center;
+  }
+  header > .nav-icon {
+    width: 100%;
+    text-align: center;
+  }
+  header > a.nav-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 8px;
+  }
+  a.nav-toggle:hover {
+    color: skyblue;
+  }
+
+  header > ul.nav-menu.active {
+    display: flex;
+  }
+}

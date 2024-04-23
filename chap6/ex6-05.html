@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function kkk(message) {
+      window.alert(message);
+    }
+  </script>
+</head>
+
+<body>
+  <h1>document.write() 활용</h1>
+  <hr>
+  <script>
+    let name = prompt("name", "홍길동");
+    if (name === null) {
+      document.write(`<h2> 이름을 입력하지 않았어요 </h2>`);
+    } else if (name === "안지훈") {
+      document.write(`<h2> ${name}님 환영합니다 </h2>`);
+    } else {
+      document.write(`<h2> ${name}님 싸대기 한대 맞으실래요? </h2>`);
+    }
+    document.write("<br>");
+    document.write("<span>2 + 5는</span><br>");
+    document.write("<mark>7 입니다.</mark>");
+    let result = confirm("당신은 자바 동영상을 5번 들었나요")
+    if (result === true) {
+      document.write(`<h2>훌륭합니다.</h2>`);
+    } else {
+      document.write(`<h2>반성하세요.</h2>`);
+    }
+  </script>
+
+  <button type="button" onclick="kkk('당신은 홈페이지를 볼 자격이 없습니다.')">클릭시 무슨일이 일어날지 모름</button>
+</body>
+
+</html>

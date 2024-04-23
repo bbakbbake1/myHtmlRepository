@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+
+    td {
+      text-align: center;
+      width: 100px;
+    }
+
+    table>thead,
+    table>tfoot {
+      background-color: #4b4545;
+      font-weight: bold;
+      color: white;
+    }
+
+    table>tbody>tr:nth-child(odd) {
+      background-color: rgb(200, 233, 247);
+    }
+
+    table>tbody>tr:hover {
+      background-color: pink;
+      color: cornflowerblue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>1학기 성적</h1>
+  <hr>
+  <table>
+    <thead>
+      <tr>
+        <td>이름</td>
+        <td>JAVA</td>
+        <td>HTML</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>안지훈</td>
+        <td>100</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>이석진</td>
+        <td>100</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>김건우</td>
+        <td>100</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>정우경</td>
+        <td>100</td>
+        <td>100</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>이름</td>
+        <td>JAVA</td>
+        <td>HTML</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+
+</html>

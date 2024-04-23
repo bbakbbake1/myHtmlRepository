@@ -1,0 +1,40 @@
+body{
+  margin: 0;
+}
+.header{
+  width: 90%; 
+  height: 50px;
+  margin: 0 auto;
+  background-color: rgb(95, 133, 236); 
+  color: rgb(226, 252, 133);
+}
+.nav{
+  float: left;
+  margin-left: 5%;
+  width: 10%;
+  height: 250px;
+  background-color: rgb(100, 240, 170);
+  color: indigo;
+}
+.section{
+  float: left;
+  width: 70%;
+  height: 250px;
+  background-color: skyblue;
+  color: brown;
+}
+.aside{
+  float: left;
+  width: 10%;
+  height: 250px;
+  background-color: rgb(100, 240, 170);
+  color: indigo;
+}
+.footer{
+  clear: both;
+  width: 90%; 
+  height: 50px;
+  margin: 0 auto;
+  background-color: rgb(95, 133, 236); 
+  color: rgb(226, 252, 133);
+}

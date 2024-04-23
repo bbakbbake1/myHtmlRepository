@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/d086ac9557.js" crossorigin="anonymous"></script>
+  <style>
+    header{
+      background-color: beige;
+      width: 100%;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header>div.icon{
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+    }
+    div.icon > span.sp1 {
+      margin-left: 150px;
+    }
+    div.icon > span.sp2{
+      margin-right: 150px;
+    }
+    header>div.search{
+      width: 500px;
+      height: 50px;
+      display: flex;
+      border: 2px solid rgb(3,199,90);
+      background-color: white;
+      border-radius: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    header>div.search input{
+      border-width: 0;
+      width: 400px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="icon">
+    <span class="sp1">
+      <i class="fa-solid fa-bars"></i>
+      <i class="fa-brands fa-apple-pay"></i>
+    </span>
+    <span class="sp2">
+      <i class="fa-brands fa-facebook-messenger"></i>
+      <i class="fa-solid fa-bell"></i>
+    </span>
+    </div>
+    <div class="search">
+      <span><i class="fa-solid fa-n"></i></span>
+      <input type="text">
+      <span>
+        <i class="fa-regular fa-keyboard"></i>
+        <i class="fa-solid fa-caret-down"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </span>
+    </div>
+  </header>
+  
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>표 만들기</title>
+  <style>
+    table,th,td{
+      border: 1px solid blue;
+      border-collapse: collapse;
+    }
+    th{
+      background-color: skyblue;
+    }
+    td,th{
+      width: 100px;
+      height: 30px;
+      text-align: center;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+ <table>
+  <h1>표 만들기</h1>
+  <hr>
+  <caption>2024년도 국회의원 선거</caption>
+  <thead>
+    <tr>
+      <th>이름</th>
+      <th>HTML</th>
+      <th>CSS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">안지훈</td>
+      <td>100</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td rowspan="2" colspan="2">100</td>
+    </tr>
+    <tr>
+      <td>이석진</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>1</th>
+      <th colspan="2">2</th>
+    </tr>
+  </tfoot>
+ </table>
+</body>
+</html>
