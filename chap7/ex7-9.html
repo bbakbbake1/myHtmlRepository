@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>new Object()로 사용자 객체 만들기,리터럴 객체로 사용자 객체 만들기</h1>
+  <hr>
+  <script>
+    //리터럴 객체 만들기
+    const litobj = {
+      name: "안지훈",
+      code: 3355,
+      ammount: 10000000000000,
+      deposit: function (money) {
+        this.ammount += money;
+      },
+      withdraw: function (money) {
+        this.ammount -= money;
+      },
+      inquiry: function () {
+        return this.ammount;
+      }
+    }
+    //new Object()로 객체 만들기
+    const obj = new Object()
+    obj.name = "홍길동";
+    obj.code = 3355;
+    obj.ammount = 30000;
+    obj.deposit = function (money) {
+      obj.ammount += money;
+    }
+    obj.withdraw = function (money) {
+      obj.ammount -= money;
+    }
+    obj.inquiry = function () {
+      return obj.ammount;
+    }
+    //prototype 으로 객체만들기 (자바)
+    function Bank(name, code, ammount) {
+      this.name = name;
+      this.code = code;
+      this.ammount = ammount;
+      this.deposit = function (money) {
+        this.ammount += money;
+      }
+      this.withdraw = function (money) {
+        this.ammount -= money;
+      }
+      this.inquiry = function () {
+        return this.ammount;
+      }
+    }
+
+    //출력
+    document.write(`<span>name = ${litobj.name} code = ${litobj.code} ammount = ${litobj.ammount}</span><br>`);
+    document.write(`<span>deposit(1000) = ${litobj.deposit(100000000)} ammount = ${litobj.ammount}</span><br>`);
+    document.write(`<span>withdraw(1000) = ${litobj.withdraw(1000000000000)} ammount = ${litobj.ammount}</span><br>`);
+    document.write(`<span>inquiry() = ${litobj.inquiry} ammount = ${litobj.ammount}</span><br>`);
+    document.write(`<hr>`);
+    document.write(`<span>name = ${obj.name} code = ${obj.code} ammount = ${obj.ammount}</span><br>`);
+    document.write(`<span>deposit(1000) = ${obj.deposit(1000000)} ammount = ${obj.ammount}</span><br>`);
+    document.write(`<span>withdraw(1000) = ${obj.withdraw(100000)} ammount = ${obj.ammount}</span><br>`);
+    document.write(`<span>inquiry() = ${obj.inquiry} ammount = ${obj.ammount}</span><br>`);
+    document.write(`<hr>`);
+    const bank1 = new Bank("안지훈", 7777, 20000000000);
+    document.write(`<span>name = ${bank1.name} code = ${bank1.code} ammount = ${bank1.ammount}</span><br>`);
+    document.write(`<span>deposit(1000) = ${bank1.deposit(100000000)} ammount = ${bank1.ammount}</span><br>`);
+    document.write(`<span>withdraw(1000) = ${bank1.withdraw(1000000000000)} ammount = ${bank1.ammount}</span><br>`);
+    document.write(`<span>inquiry() = ${bank1.inquiry} ammount = ${bank1.ammount}</span><br>`);
+    document.write(`<hr>`);
+    const bank2 = new Bank("메시", 10, 20000000);
+    document.write(`<span>name = ${bank2.name} code = ${bank2.code} ammount = ${bank2.ammount}</span><br>`);
+    document.write(`<span>deposit(1000) = ${bank2.deposit(100000000)} ammount = ${bank2.ammount}</span><br>`);
+    document.write(`<span>withdraw(1000) = ${bank2.withdraw(1000000000000)} ammount = ${bank2.ammount}</span><br>`);
+    document.write(`<span>inquiry() = ${bank2.inquiry} ammount = ${bank2.ammount}</span><br>`);
+  </script>
+</body>
+
+</html>

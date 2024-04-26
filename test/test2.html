@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #tdbut {
+      text-align: center;
+    }
+
+    #content {
+      height: 200px;
+    }
+
+    #table2 {
+      border: 1px solid black;
+    }
+
+    thead td {
+      border: 1px solid black;
+    }
+
+    #tb1 td {
+      border: 1px solid black;
+    }
+
+    tfoot td {
+      border: 1px solid black;
+    }
+
+    thead {
+      background-color: orangered;
+      color: white;
+
+    }
+
+    #tb1 {
+      background-color: rgb(232, 232, 175);
+    }
+
+    tfoot {
+      background-color: orangered;
+      color: white;
+    }
+
+    #inputbut2 {
+      background-color: rgb(154, 152, 152);
+    }
+
+    #coltd {
+      text-align: center;
+    }
+
+    #table2 {
+      width: 100%;
+      height: 35vh;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>포트폴리오 문제</h1>
+  <p>설명:'*'이 붙은 문구 및 현재 작성된 문구는 화면구현시 구현을 안해도 됩니다.설명을 위해 작성한 구문입니다.</p>
+  <hr>
+  <br>
+  <p>*하단의 화면처럼 공지사항 작성하기 폼을 작성하시오.(from의 action속성값은 "insert.no"부여,method속성값은 "post"부여)</p>
+  <form action="insert.no" method="post">
+    <fieldset>
+      <legend>
+        공지사항 작성하기
+      </legend>
+      <table id="tb2">
+        <tr>
+          <td id="td1"><b>제목</b></td>
+          <td>
+            <input type="text" name="title" id="title" size="50" placeholder="제목을 입력하시오.">
+          </td>
+          <td>
+            <span>"name속성값은 "title"부여,필수입력사항 속성부여</span>
+          </td>
+        </tr>
+        <tr>
+          <td id="td1"><b>내용</b></td>
+          <td><input type="text" name="content" id="content" size="50" placeholder="내용을 입력하시오."></td>
+          <td><span>"name속성값은 "content"부여,필수입력사항 속성부여</span></td>
+        </tr>
+        <tr>
+          <td id="td1"><b>첨부파일</b></td>
+          <td><input type="button" value="파일선택" name="uploadFile">선택된파일 없음</td>
+          <td><span>"name속성값은 "uploadFile"부여</span></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td id="tdbut"><input type="button" value="작성하기"></td>
+          <td></td>
+        </tr>
+      </table>
+    </fieldset>
+    <br>
+    <hr>
+    <br>
+    <div>
+      <table id="table2">
+        <thead id="th1">
+          <tr>
+            <td>번호</td>
+            <td colspan="2" id="coltd">제목</td>
+            <td>작성자</td>
+            <td>작성일</td>
+            <td>조회수</td>
+          </tr>
+
+        </thead>
+        <tbody id="tb1">
+          <tr>
+            <td>9</td>
+            <td>공지사항 제목9</td>
+            <td><input id="inputbut2" type="button" value="바로가기"></td>
+            <td>user01</td>
+            <td>2021-03-29</td>
+            <td>34</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>공지사항 제목6</td>
+            <td><input id="inputbut2" type="button" value="바로가기"></td>
+            <td>answ445</td>
+            <td>2021-03-12</td>
+            <td>67</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>공지사항 제목3</td>
+            <td><input id="inputbut2" type="button" value="바로가기"></td>
+            <td>testg12</td>
+            <td>2021-03-01</td>
+            <td>98</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>공지사항 제목2</td>
+            <td><input id="inputbut2" type="button" value="바로가기"></td>
+            <td>palwe3</td>
+            <td>2021-01-02</td>
+            <td>85</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>공지사항 제목1</td>
+            <td><input id="inputbut2" type="button" value="바로가기"></td>
+            <td>xml123</td>
+            <td>2020-12-24</td>
+            <td>124</td>
+          </tr>
+        </tbody>
+        <tfoot id="tf1">
+          <tr>
+            <td colspan="4" id="coltd">전체공지사항갯수</td>
+            <td colspan="2" id="coltd">5개</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </form>
+</body>
+
+</html>

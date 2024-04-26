@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function createDiv() {
+      const parent = document.querySelector("#parent");
+      const div = document.createElement("div");
+      div.innerHTML = `<span>새로운 Div를 만들었습니다.</span>`;
+      div.setAttribute("id", "mydiv");
+      div.style.color = `white`;
+      div.style.backgroundColor = `skyblue`;
+      div.onclick = function () {
+        this.style.backgroundColor = `navy`;
+      }
+      parent.appendChild(div);
+    }
+  </script>
+</head>
+
+<body id="parent">
+  <h1>Div 객체를 동적으로 생성,삽입,삭제</h1>
+  <hr>
+  <p>Lorem ipsum dolor sit amet.</p>
+  <a href="javascript:createDiv()">Div생성</a>
+</body>
+
+</html>

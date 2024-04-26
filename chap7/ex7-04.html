@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function arrayPrint(message, array) {
+      document.write(`${message} = [${array.toString()}] <br>`);
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Array 객체 메소드활용</h1>
+  <hr>
+  <script>
+    const nameArray = new Array("황", "최", "김", "박", "구", "마");
+    //1. join 배열을 값과 연결함
+    arrayPrint("nameArray", nameArray);
+    let joinArray = nameArray.join("$$");
+    document.write(`join = ${joinArray}<br>`)
+    //2. sort 정렬
+    let sortArray = nameArray.sort()
+    document.write(`sort = ${sortArray}<br>`)
+    //3. revers 처음과 끝의 배열을 바꿈
+    let reversArray = nameArray.reverse();
+    document.write(`revers = ${reversArray}<br>`);
+    //4. slice 2부터 5이전까지의 배열을 자름
+    let sliceArray = nameArray.slice(2, 5);
+    document.write(`slice (2~4) = ${sliceArray}<br>`);
+    //5. concat 배열을 합쳐줌
+    const age = ["10", "20", "30"];
+    let concatArray = nameArray.concat(age);
+    document.write(`concat = ${concatArray}`);
+  </script>
+</body>
+
+</html>

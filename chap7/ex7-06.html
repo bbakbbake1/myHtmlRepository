@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function change() {
+      let date = new Date();
+      let hour = date.getHours();
+      let minute = date.getMinutes();
+      let second = date.getSeconds();
+      if (second % 2 === 0) {
+
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>배경색 바꾸기</h1>
+  <hr>
+  <fieldset>
+    <legend>
+      이벤트실습하기
+    </legend>
+    <span>현재시간이 짝수일때 베이지색,홀수일때 하늘색</span>
+    <input type="button" onclick="change()" value="배경색바꾸기,시간보이기">
+  </fieldset>
+</body>
+
+</html>

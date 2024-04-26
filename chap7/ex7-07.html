@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    #star {
+      color: red;
+    }
+
+    .main {
+      border: 1px solid black;
+    }
+
+    #div1 {
+      padding-left: 10px;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    #p1 {
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+      padding: 10px 10px;
+    }
+
+    table {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    td {
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+    }
+
+    table td.td1 {
+      background-color: red;
+    }
+
+    #td3 {
+      text-align: center;
+    }
+
+    #b2 {
+      color: green;
+    }
+  </style>
+  <script>
+    function userIdCheck() {
+      const userId = document.querySelector("#userId");
+      const userIdInfo = document.querySelector("#userIdInfo");
+      if (userId.value === "") {
+        userIdInfo.innerHTML = `필수입력사항입니다.`;
+        return false;
+      } else {
+        userIdInfo.innerHTML = `ok`;
+        return true;
+      }
+    }
+
+    function userPwCheck(state) {
+      const userPw = document.querySelector("#userPw");
+      const userPwInfo = document.querySelector("#userPwInfo");
+      if (state === "blur") {
+        if (userPw.value === "") {
+          userPwInfo.innerHTML = `필수입력사항입니다.`;
+          return false;
+        } else {
+          userPwInfo.innerHTML = `ok`;
+          return true;
+        }
+      } else if (state === "focus") {
+        userPwInfo.innerHTML = `영문자 대/소문자 숫자포함 8~32자`;
+        return false;
+      }
+    }
+
+    function userPwOkCheck(state) {
+      const userPw = document.querySelector("#userPw");
+      const userPwok = document.querySelector("#userPwok");
+      const userPwokInfo = document.querySelector("#userPwInfo");
+      if (state === "blur") {
+        if (userPw.value === userPwok.value) {
+          userPwokInfo.innerHTML = `ok`;
+          return true;
+        } else {
+          userPwokInfo.innerHTML = `비밀번호가 일치하지 않습니다.`;
+          return false;
+        }
+      } else if (state === "focus") {
+        userPwokInfo.innerHTML = `비밀번호를 확인해주세요.`;
+        return false;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="main">
+    <h1>회원가입</h1>
+    <div id="div1">
+      <span><b id="star">*</b><b>온라인 회원가입 작성</b></span>
+      <p id="p1">·고객님의정보는 &nbsp;&nbsp;&nbsp; 개인정보보호정책에 의해 철저하게 보호됩니다.</p>
+    </div>
+    <form action="#" method="post">
+      <table>
+        <tr>
+          <td class="td1">사용자ID <b id="star">*</b></td>
+          <td>
+            <input type="text" name="userId" id="userId" onblur="userIdCheck()">
+            <input type="button" value="ID 중복확인">
+            <span id="userIdInfo" style="color: red;"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="td1">비밀번호<b id="star">*</b></td>
+          <td>
+            <input type="password" name="userPw" id="userPw" onblur="userPwCheck(`blur`)"
+              onfocus="userPwCheck(`focus`)">
+            <span>·4~12자리의 영문,숫자,특수문자(!,@,$,%,^,&,*)만 가능</span>
+            <br>
+            <span id="userPwInfo" style="color: red;"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="td1">비밀번호 확인<b id="star">*</b></td>
+          <td>
+            <input type="password" name="userPwok" id="userPwok" onblur="userPwOkCheck(`blur`)"
+              onfocus="userPwOkCheck(`focus`)">
+            <span id="userPwokInfo" style="color: red;"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="td1">성명<b id="star">*</b></td>
+          <td>
+            <input type="text" name="userName" id="userName">
+            <span>·띄어쓰기 없이 입력,반드시 실명이어야 합니다!</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="td1">E-mail<b id="star">*</b></td>
+          <td>
+            <input type="email" name="userEmail" id="userEmail">
+            <span><b>메일 수신여부</b></span>
+            <p>·<b>할인 이벤트정보</b> 및 할인쿠폰,관심분야 등 꼭 필요한 정보를 빠르게 받아보실 수 있습<br>니다.
+              <br>·비밀번호 분실시 E-mail로 확인해 드리니, <b id="b2">정확한 E-mail주소를 기입</b>해 주세요.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td class="td1">우편번호<b id="star">*</b></td>
+          <td>
+            <input type="number" name="userAddress" id="userAddress">
+            <span>-</span>
+            <input type="number" name="userAddressNum" id="userAddressNum">
+            <input type="button" value="우편번호 검색">
+          </td>
+        </tr>
+        <tr>
+          <td class="td1">주소<b id="star">*</b></td>
+          <td>
+            <input type="text" name="userAddress" id="userAddress">
+            <br>
+            <input type="text" name="userAddress" id="userAddress">
+          </td>
+        </tr>
+        <tr>
+          <td class="td1">휴대폰번호<b id="star">*</b></td>
+          <td>
+            <input type="number" name="userPhoneNum" id="userPhoneNum">
+            <span>-</span>
+            <input type="number" name="userPhoneNum" id="userPhoneNum">
+            <span>-</span>
+            <input type="number" name="userPhoneNum" id="userPhoneNum">
+          </td>
+        </tr>
+        <tr>
+          <td id="td3" colspan="2">
+            <input type="submit" value="다음">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+
+</html>

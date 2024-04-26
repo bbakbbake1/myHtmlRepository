@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let myWindow = null;
+    function createWindow(obj) {
+      let contend = document.querySelector("#contend");
+      if (myWindow === null) {
+        myWindow = window.open("ex8-06.html", "_blank", "");
+
+      }
+      myWindow.document.open();
+      myWindow.document.write(contend.value);
+      myWindow.document.close();
+    }
+  </script>
+</head>
+
+<body>
+  <h1>HTML 문서 작성기 만들기</h1>
+  <hr>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    Deserunt nulla eveniet reiciendis est eaque commodi totam,
+    vel expedita dolores ducimus.</p>
+  <form action="#" method="post">
+    <textarea name="contend" id="contend" cols="30" rows="10">
+
+      </textarea>
+    <button type="button" onclick="createWindow(this)">html 문서 출력하기</button>
+  </form>
+</body>
+
+</html>

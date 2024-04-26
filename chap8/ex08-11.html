@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function createDiv() {
+      //부모객체가져오기
+      const parent = document.querySelector("#parent");
+      //<div id = "myDiv" style = "color : red" onclick = "aaa()"><span>새로운 내용으로 만들었어요</span></div>
+      //자바스크립트에서 만들어서 body객체에 넣어주자
+      const div = document.createElement("div");//<div> </div>
+      div.innerHTML = `<span>새로운 내용으로 만들었어요</span>`;//<div><span>새로운 내용으로 만들었어요</span></div>
+      div.setAttribute("id", "myDiv");//<div id = "myDiv"
+      div.style.color = `red`;//<div id = "myDiv" style = "color : red"
+      div.style.backgroundColor = `yellow`; //<div id = "myDiv" style = "color : red" backgroundColor = "yellow" onclick = "aaa()"><span>새로운 내용으로 만들었어요</span></div>
+      div.onclick = function () {
+        this.backgroundColor = `skyblue`;
+      }
+      parent.appendChild(div);
+    }
+  </script>
+</head>
+
+<body id="parent">
+  <h1>DIV 객체를 동적으로 생성,삽입,삭제하는 예제</h1>
+  <hr>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing
+    elit. Voluptas pariatur, quo id dolor facere minus officia soluta cupiditate asperiores eligendi.
+  </p>
+  <a href="javascript:createDiv()">DIV생성</a>
+</body>
+
+</html>

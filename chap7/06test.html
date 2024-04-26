@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function change() {
+      const date = new Date();
+      let hour = date.getHours();
+      let minute = date.getMinutes();
+      let second = date.getSeconds();
+      if (second % 2 === 0) {
+        document.body.style.backgroundColor = "beige";
+      } else {
+        document.body.style.backgroundColor = "skyblue";
+      }
+      let spanTime = document.querySelector("#spanTime");
+      spanTime.innerHTML = `현재시간 보이기 ${hour}시 ${minute}분 ${second}초`;
+    }
+  </script>
+</head>
+
+<body>
+  <h1>배경색 바꾸기</h1>
+  <hr>
+  <fieldset>
+    <legend>
+      이벤트실습하기
+    </legend>
+    <span id="spanTime">현재시간이 짝수일때 베이지색,홀수일때 하늘색</span>
+    <button type="button" onclick="change()">배경색바꾸기,시간보이기</button>
+  </fieldset>
+</body>
+
+</html>

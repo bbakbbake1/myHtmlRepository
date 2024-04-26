@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function change() {
+      const spanArray = document.getElementsByTagName("span");
+      for (let i = 0; i < spanArray.length; i++) {
+        if (i === 2) {
+          spanArray[i].style.display = `none`;
+        } else {
+          spanArray[i].style.color = "skyblue";
+          spanArray[i].style.fontSize = `${i * 5 + 10}px`;
+          spanArray[i].style.border = `1px solid black`;
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1 style="display: inline-block;">내가 좋아하는 과일</h1>
+  <button onclick="change()">누르세요</button>
+  <hr>
+  <p>Lorem ipsum <span>dolor</span> sit amet consectetur adipisicing elit. <span>Blanditiis</span> sequi laboriosam modi
+    consectetur quibusdam
+    eveniet earum <span>maxime</span> omnis tempore, porro praesentium! <span>Hic</span> totam ducimus tempora corporis
+    consequuntur dolores
+    assumenda facere.</p>
+</body>
+
+</html>
