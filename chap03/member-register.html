@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="member.css">
+  <script src="member-regisert.js"></script>
 </head>
 
 <body>
@@ -15,13 +16,14 @@
     <table>
       <tr>
         <td class="title">
-          <label for="memberId">아이디</label>
+          <label for="userId">아이디</label>
         </td>
         <td class="contend">
           <span>영문자,숫자_만 입력 가능. 최소3자이상 입력하세요.</span>
           <br>
           <input class="request" type="text" name="memberId" id="memberId" size="25" minlength="3" maxlength="12"
-            required placeholder="아이디 입력">
+            required placeholder="아이디 입력" onblur="memberIdCheck(`blur`)" onfocus="memberIdCheck(`focus`)">
+          <span id="memberIdInfo" style="color: red;"></span>
         </td>
       <tr>
         <td class="title">
@@ -30,8 +32,9 @@
         <td class="contend">
           <span>영문자,숫자,특수문자를 포함하여 6~12자를 입력하세요.</span>
           <br>
-          <input class="request" type="text" name="memberId" id="memberId" size="25" minlength="3" maxlength="12"
-            required placeholder="비밀번호 입력">
+          <input class="request" type="password" name="memberPw" id="memberPw" size="25" minlength="3" maxlength="12"
+            required placeholder="비밀번호 입력" onblur="memberPwCheck(`blur`)" onfocus="memberPwCheck(`focus`)">
+          <span id="memberPwInfo" style="color: red;"></span>
         </td>
       <tr>
         <td class="title">
@@ -39,8 +42,9 @@
         </td>
         <td class="contend">
           <br>
-          <input class="request" type="text" name="memberId" id="memberId" size="25" minlength="3" maxlength="12"
-            required>
+          <input class="request" type="password" name="memberPwCheck1" id="memberPwCheck1" size="25" minlength="3"
+            maxlength="12" required onblur="memberPwCheckReal(`blur`)" onfocus="memberPwCheckReal(`focus`)">
+          <span id="memberPwCheckInfo" style="color: red;"></span>
         </td>
     </table>
     <h4>개인정보 입력</h4>
@@ -51,7 +55,8 @@
         </td>
         <td>
           <input class="request" type="text" name="memberName" id="memberName" size="25" minlength="3" maxlength="12"
-            required>
+            required onblur="memberNameCheck(`blur`)" onfocus="memberNameCheck(`focus`)">
+          <span id="memberNameInfo" style="color: red;"></span>
         </td>
       </tr>
       <tr>
@@ -59,12 +64,13 @@
           <label for="memberNick">닉네임</label>
         </td>
         <td>
-          <span>공백없이 한글,영문,숫자만 입력 가능 (한글 2자, 영문4자 이상)<br>
+          <span>
             닉네임을 바꾸시면 앞으로 1일 이내에는 변경할 수 없습니다.
           </span>
           <br>
           <input class="request" type="text" name="memberNick" id="memberNick" size="25" minlength="3" maxlength="12"
-            required>
+            required onblur="memberNickCheck(`blur`)" onfocus="memberNickCheck(`focus`)">
+          <span id="memberNickInfo" style="color: red;"></span>
         </td>
       </tr>
       <tr>
@@ -72,8 +78,9 @@
           <label for="memberEmail">E-mail</label>
         </td>
         <td>
-          <input class="request" type="text" name="memberEmail" id="memberEmail" size="50" minlength="3" maxlength="12"
-            required>
+          <input class="request" type="email" name="memberEmail" id="memberEmail" size="50" minlength="3" maxlength="12"
+            required onblur="memberEmailCheck(`blur`)" onfocus="memberEmailCheck(`focus`)">
+          <span id="memberEmailInfo" style="color: red;"></span>
         </td>
       </tr>
       <tr>
@@ -100,8 +107,9 @@
           <label for="memberTell">전화번호</label>
         </td>
         <td>
-          <input class="request" type="text" name="memberTell" id="memberTell" size="25" minlength="3" maxlength="12"
-            required>
+          <input class="request" type="text" name="memberTell" id="memberTell" size="25" minlength="3" maxlength="15"
+            required onblur="memberTellCheck(`blur`)" onfocus="memberTellCheck(`focus`)">
+          <span id="memberTellInfo" style="color: red;"></span>
         </td>
       </tr>
       <tr>
@@ -110,7 +118,8 @@
         </td>
         <td>
           <input class="request" type="text" name="memberPhoneNum" id="memberPhoneNum" size="25" minlength="3"
-            maxlength="12" required>
+            maxlength="15" required onblur="memberPhoneNumCheck(`blur`)" onfocus="memberPhoneNumCheck(`focus`)">
+          <span id="memberPhoneNumInfo" style="color: red;"></span>
         </td>
       </tr>
       <tr>
