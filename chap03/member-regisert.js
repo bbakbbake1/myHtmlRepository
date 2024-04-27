@@ -154,15 +154,21 @@ function memberPhoneNumCheck(state) {
   if (state === "blur") {
     if (memberPhoneNum.value == "") {
       memberPhoneNumInfo.innerHTML = `필수입력사항입니다.`;
+      return false;
     } else {
       let regExp = /^[0-9]{3}-[0-9]{3,4}-[0-9]{4}/;
       if (!memberPhoneNum.value.match(regExp)) {
         memberPhoneNumInfo.innerHTML = `형식에 맞게 입력해주세요.`;
+        return false;
       } else {
         memberPhoneNumInfo.innerHTML = `ok`;
+        return true;
       }
     }
   } else if (state === "focus") {
     memberPhoneNumInfo.innerHTML = `숫자, -을 포함해 휴대전화 형식에 맞게 입력해주세요.`;
+    return false;
   }
 }
+
+

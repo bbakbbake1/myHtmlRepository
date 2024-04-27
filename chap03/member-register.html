@@ -137,8 +137,10 @@
         </td>
         <td>
           <input class="request" type="text" name="memberAddress" id="memberAddress" size="15" minlength="3"
-            maxlength="12" required>
-          <input class="addresssearch" type="submit" value="주소검색"><br>
+            maxlength="12" required onblur="memberAddressCheck(`blur`)" onfocus="memberAddressCheck(`focus`)">
+          <input class="addresssearch" type="submit" value="주소검색">
+          <span id="memberAddressInfo" style="color: red;"></span>
+          <br>
           <input class="request" type="text" name="memberAddress" id="memberAddress" size="25" minlength="3"
             maxlength="12" required>
           <input type="submit" value="기본주소"><br>

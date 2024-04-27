@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-image: url(../mainpage/바르샤.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    body > head {
+      display: flex;
+      justify-content: space-between;
+    }
+    h1 {
+      color: white;
+    }
+    ul {
+      list-style: none;
+    }
+    li {
+      color: white;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    #navul {
+      display: flex;
+      justify-content: center;
+    }
+    #navul > li {
+      padding: 0px 30px 0px 30px;
+      font-size: x-large;
+    }
+    #navul2{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    #SQUADli {
+      margin-left: 0px;
+    }
+  </style>
+</head>
+<body>
+  <head>
+    <div>
+      <h1>Fc Barcelona</h1>
+    </div>
+      <ul>
+        <li><a href="https://www.laliga.com/en-GB">LA Liga</a></li>
+        <li><a href="https://www.uefa.com/uefachampionsleague/">UEFA Champions Legue</a></li>
+      </ul>
+  </head>
+  <nav>
+    <ul id="navul">
+      <li><a href="">HOME</a></li>
+      <li><a href="">MENU</a></li>
+      <li><a href="">BORD</a></li>
+      <li><a href="">SHOPING</a></li>
+      <li><a href="">
+        SQUAD</a>
+        <ul id="navul2">
+          <li id="SQUADli">PLAYERS</li>
+          <li id="SQUADli">HEAD COACH</li>
+          <li id="SQUADli">COACH</li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <footer>
+
+  </footer>
+</body>
+</html>

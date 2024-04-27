@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="memberlogin.css">
+  <script src="memberlogin.js"></script>
 </head>
 
 <body>
@@ -17,9 +18,11 @@
     <label for="">비회원(주문조회)</label>
     <div class="login">
       <div>
-        <input type="text" size="25" placeholder="아이디">
+        <input type="text" name="memberId" id="memberId" size="25" placeholder="아이디" required 
+        onblur="memberIdCheck(`blur`)" onfocus="memberIdCheck(`focus`)" >
         <br>
-        <input type="password" size="25" placeholder="비밀번호">
+        <input type="password" name="memberPw" id="memberPw" size="25" placeholder="비밀번호"
+        onblur="memberIdCheck(`blur`)" onfocus="memberIdCheck(`focus`)">
       </div>
       <div>
         <button class="loginbutton">로그인</button>
@@ -35,12 +38,15 @@
         <button>?</button>
       </span>
     </div>
+    <span id="memberIdInfo" style="color: red; font-size: 8px;"></span>
+    <span id="memberPwInfo" style="color: red; font-size: 8px;"></span>
     <div class="button">
       <button>회원가입</button>
       <button>아이디 찾기</button>
       <button>비밀번호 찾기</button>
     </div>
   </form>
+    
 
 
 </body>
