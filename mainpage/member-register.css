@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+h4 {
+  font-size: small;
+}
+
+form {
+  width: 80%;
+  border: 1px dotted black;
+  padding: 10px;
+  margin: 0 auto;
+}
+table {
+  width: 100%;
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+td {
+  /* border: 1px solid black; */
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+}
+
+td.title {
+  width: 20%;
+  padding-left: 5px;
+  border-left: 1px solid white;
+  background-color: rgb(226, 223, 223);
+  text-align: center;
+  font-size: 15px;
+}
+td.contend {
+  width: 80%;
+  padding: 5px 5px 10px 5px;
+}
+
+td > span {
+  font-size: 8px;
+}
+input {
+  border: 1px solid lightgray;
+  margin: 8px;
+  height: 27px;
+  border-radius: 2px;
+  background-color: #f4f4f4;
+}
+input.request {
+  background-image: url(https://cdn.discordapp.com/attachments/1212631551226150939/1230716388092678164/wrest.gif?ex=663454f4&is=6621dff4&hm=8079b04eedd0d9308fc503f5306f2bede34054958c7fa62cf223312bb979a06e&);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.joinpath {
+  display: flex;
+  align-items: center;
+  font-size: 8px;
+}
+.addresssearch {
+  color: white;
+  background-color: black;
+}
+.sale {
+  color: red;
+}
+.prevention {
+  border: 1px solid black;
+  font-size: 12px;
+  background-color: gray;
+}
+.check {
+  display: flex;
+  align-items: center;
+}
+
+.span1 {
+  display: flex;
+  align-items: center;
+}
+
+span.last {
+  display: flex;
+  justify-content: center;
+}
+.joinbutton {
+  color: white;
+  background-color: rgb(226, 16, 114);
+}

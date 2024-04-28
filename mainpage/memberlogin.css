@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+}
+
+.loginbutton {
+  height: 100%;
+  margin-left: 2px;
+  border-radius: 10%;
+  border: none;
+  background-color: red;
+  color: white;
+}
+
+div.otp {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
