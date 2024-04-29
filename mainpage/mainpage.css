@@ -43,20 +43,20 @@ a {
   padding: 0px 30px 0px 30px;
   font-size: x-large;
 }
-#menuul{
- padding-left: 0px;
- display: none;
- font-size: small;
+#menuul {
+  padding-left: 0px;
+  display: none;
+  font-size: small;
 }
-#shopingul{
- padding-left: 0px;
- display: none;
- font-size: small;
+#shopingul {
+  padding-left: 0px;
+  display: none;
+  font-size: small;
 }
-#squadul{
- padding-left: 0px;
- display: none;
- font-size: small;
+#squadul {
+  padding-left: 0px;
+  display: none;
+  font-size: small;
 }
 /* nav끝 */
 /* section시작 */
@@ -77,6 +77,7 @@ section {
   padding-bottom: 20px;
   border-radius: 20px;
 }
+
 #footerimg {
   padding: 10px;
 }
@@ -96,7 +97,7 @@ section {
 #footerul2 > li {
   padding-top: 10px;
 }
-#footerdiv2 > h1{
+#footerdiv2 > h1 {
   margin: 0px 200px 0px 200px;
   font-size: 25px;
 }

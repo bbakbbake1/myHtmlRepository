@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let imgNameArray = ["./images/slide-1.jpg",
+      "./images/slide-2.jpg",
+      "./images/slide-3.jpg",
+      "./images/slide-4.jpg",
+      "./images/apple.png",
+      "./images/banana.png",
+      "./images/mango.png",
+      "./images/strawberry.png"];
+    let count = 0;
+    function changeImg(img) {
+      img.src = imgNameArray[parseInt(Math.random() * (7 - 0 + 1) + 0)];
+    }
+  </script>
+</head>
+
+<body>
+  <h1>new Image()로 이미지 로딩</h1>
+  <hr>
+  <div>
+    <p>이미지를 클릭하면 다음 이미지를 보여줍니다.</p>
+    <img src="./images/slide-1.jpg" alt="사진" width="200px" height="200px" onclick="changeImg(this)">
+  </div>
+</body>
+
+</html>
