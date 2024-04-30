@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function inputKey(inputObj, e) {
+      let div = document.querySelector("form div");
+      div.innerHTML = `<br>e.key = ${e.key} <br> e.code = ${e.code}`;
+    }
+  </script>
+</head>
+
+<body>
+  <h1>키 리스터와 이벤트객체의 프로퍼티</h1>
+  <hr>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, veniam?</p>
+
+  <form action="#" method="post">
+    <input type="text" name="keytest" id="keytest" onkeydown="inputKey(this,event)">
+    <div>
+
+    </div>
+  </form>
+</body>
+
+</html>

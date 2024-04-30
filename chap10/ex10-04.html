@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let timeId = 0;
+    function rotateText() {
+      timeId = setInterval(() => {
+        let mySpan = document.querySelector("#mySpan");
+        let str = mySpan.innerHTML;
+        let first = str.substr(0, 1);//자
+        let remain = str.substr(1, str.length - 1);//동으로 회전하는 텍스트입니다.
+        mySpan.innerHTML = remain + first;//동으로 회전하는 텍스트입니다. + 자
+      }, 200);
+    }
+    function stopInterval() {
+      if (timeId > 0) {
+        clearInterval(timeId);
+        alert("인터벌 정지");
+      }
+    }
+  </script>
+</head>
+
+<body onload="rotateText()">
+  <h1>글자가 회전하는 프로그램 만들기</h1>
+  <hr>
+  <div>
+    <span id="mySpan" onclick="stopInterval()">자동으로 회전하는 텍스트입니다.</span>
+  </div>
+</body>
+
+</html>

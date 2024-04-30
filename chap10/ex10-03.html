@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let setTimeId = 0;
+    function callTimer(obj, time) {
+      setTimeId = setTimeout(() => { window.location = "https://namu.wiki/w/%EB%A6%AC%EC%98%A4%EB%84%AC%20%EB%A9%94%EC%8B%9C" }, time);
+    }
+    function clearTimer() {
+      if (setTimeId > 0) {
+        clearTimeout(setTimeId);
+        alert("타임아웃이 해제되었습니다.");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>이미지에 마우스를 올리고 5초간 그대로 있을 때 사이트로 이동합니다.</h1>
+  <hr>
+  <div>
+    <img src="../chap02/소스/2/media/메시.jpg" alt="메시" width="300px" height="300px" onmouseover="callTimer(this,5000)"
+      onmouseout="clearTimer()">
+  </div>
+
+</body>
+
+</html>

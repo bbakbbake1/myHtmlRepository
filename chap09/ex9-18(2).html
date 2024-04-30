@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function sumCal(obj) {
+      let sum = document.querySelector("#sum");
+      if (obj.checked === true) {
+        sum.value = `${parsInt(sum.value) + parsInt(obj.value)}`;
+      } else {
+        sum.value = `${parsInt(sum.value) - parsInt(obj.value)}`;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>물품을 선택하면 금액이 자동계산됩니다.</h1>
+  <hr>
+  <form action="#" method="post">
+    <input type="checkbox" name="hap" id="hap" value="10000" onclick="sumCal(this)">
+    <label for="hap">모자</label>
+    <input type="checkbox" name="shose" id="shose" value="30000" onclick="sumCal(this)">
+    <label for="shose">구두</label>
+    <input type="checkbox" name="bag" id="bag" value="80000" onclick="sumCal(this)">
+    <label for="bag">명품가방</label>
+    <br>
+    <label for="sum">지불하실금액</label>
+    <input type="number" name="sum" id="sum" value="0" size="20" maxlength="10">
+  </form>
+</body>
+
+</html>

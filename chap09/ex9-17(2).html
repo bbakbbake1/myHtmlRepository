@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function radioCheck() {
+      let index = -1;
+      let radioArray = document.querySelectorAll("input[type='radio']");
+      for (let i = 0; i < radioArray.length; i++) {
+        if (radioArray[i].checked === true) {
+          index = i;
+          break;
+        }
+      }
+      if (index !== -1) {
+        alert(`${radioArray[index].value}이 선택되었습니다.`);
+      } else {
+        alert(`선택되지 않음`);
+        return false;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>버튼을 클릭하면 선택된 라디오 버튼의 value룰 출력합니다.</h1>
+  <hr>
+  <form action="#">
+    <fieldset>
+      <legend>목적지입력</legend>
+      <input type="radio" name="city" id="city1" value="seoul">
+      <label for="city">서울</label>
+      <input type="radio" name="city" id="city2" value="busan">
+      <label for="city">부산</label>
+      <input type="radio" name="city" id="city3" value="chunchen">
+      <label for="city">춘천</label>
+      <input type="button" value="find checked" onclick="radioCheck();">
+    </fieldset>
+  </form>
+
+</body>
+
+</html>

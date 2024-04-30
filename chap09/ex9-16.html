@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    label {
+      display: inline-block;
+      width: 60px;
+      text-align: left;
+      padding-left: 5px;
+    }
+  </style>
+  <script>
+    function chackName(obj) {
+      if (obj.value === "") {
+        console.log(`obj.value = ${obj.value}`);
+        obj.focus();
+      }
+    }
+  </script>
+</head>
+
+<body onload="document.querySelector('#name').focus()">
+  <h1>onefocus와 onblur</h1>
+  <hr>
+  <p>이름을 입력하지 않고 다른 창으로 이동할 수 없습니다.</p>
+  <form action="#" method="post">
+    <fieldset>
+      <legend>개인정보 입력</legend>
+      <label for="name">name</label>
+      <input type="text" name="name" id="name" size="20" maxlength="4" onblur="chackName(this)">
+      <br>
+      <label for="num">number</label>
+      <input type="number" name="num" id="num" size="20" maxlength="8">
+      <br>
+      <button type="button">send</button>
+    </fieldset>
+  </form>
+</body>
+
+</html>

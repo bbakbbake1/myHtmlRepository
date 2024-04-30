@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let myWin = null;
+    function load(url) {
+      myWin = window.open(url, "mywindow", "left = 100, top = 100, width = 500px, height=500");
+    }
+    function winclose() {
+      if (myWin !== null) {
+        myWin.close();
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>window.open()으로 윈도우열기</h1>
+  <hr>
+  <div>
+    <a href="javascript:load('http://www.naver.com')">네이버 홈페이지</a>
+    <br>
+    <a href="javascript:load('http://www.nate.com')">네이트 홈페이지</a>
+    <br>
+    <a href="javascript:load('http://www.google.com')">구글 홈페이지</a>
+    <br>
+    <a href="javascript:winclose()">창 닫기</a>
+
+  </div>
+</body>
+
+</html>
