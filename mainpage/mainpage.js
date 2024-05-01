@@ -27,11 +27,16 @@ function join() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  function call_js() {
+  
     let slideshow = document.querySelector(".slideshow");
     let slideshow_slides = document.querySelector(".slideshow_slides");
     let slides = document.querySelectorAll(".slideshow_slides a");
-    console.log(slides);
+
+    let prev = document.querySelector(".prev");
+    let next = document.querySelector(".next");
+
+    let indicators = document.querySelectorAll(".indicator a");
+
     //보여줄 회전목마의 현재 위치값,시간설정,슬라이드 수
     let currentIndex = 0;
     let timer = null;
@@ -48,10 +53,10 @@ document.addEventListener('DOMContentLoaded', function () {
       let newLeft = index * -100 + `%`;
       slideshow_slides.style.left = newLeft;
 
-      // indicators.forEach((e) => {
-      //   e.classList.remove("active");
-      // });
-      // indicators[currentIndex].classList.add("active");
+        indicators.forEach((e) => {
+        e.classList.remove("active");
+        });
+       indicators[currentIndex].classList.add("active");
     }
     //index = (0번부터 3번까지) 3초간 gotoSlide(index)
     gotoSlide(0);
@@ -65,6 +70,54 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 3000);
     }
     startTimer();
+    //이벤트처리
+  slideshow_slides.addEventListener("mouseenter", function () {
+    clearInterval(timer);
+  });
+  slideshow_slides.addEventListener("mouseleave", function () {
+    startTimer();
+  });
+  //
+  prev.addEventListener("mouseenter", function () {
+    clearInterval(timer);
+  });
+  next.addEventListener("mouseenter", function () {
+    clearInterval(timer);
+  });
+  //
+  prev.addEventListener("click", function (e) {
+    e.preventDefault(); //a tag 기본기능을 막는다.
+    currentIndex -= 1;
+    if (currentIndex < 0) {
+      currentIndex = slideCount - 1;
+    }
+    gotoSlide(currentIndex);
+  });
+
+
+  next.addEventListener("click", function (e) {
+    e.preventDefault(); //a tag 기본기능을 막는다.
+    currentIndex += 1;
+    if (currentIndex > slideCount - 1) {
+      currentIndex = 0;
+    }
+    gotoSlide(currentIndex);
+  });
+
+  indicators.forEach((e) => {
+    e.addEventListener("mouseenter", () => {
+      clearInterval(timer);
+    });
+  });
+
+  for (let i = 0; i < indicators.length; i++) {
+    indicators[i].addEventListener("click", (e) => {
+      e.preventDefault();
+      gotoSlide(i);
+    });
   }
+  
   call_js();
+  
+
 });
